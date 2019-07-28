@@ -1,0 +1,27 @@
+{
+  "name": "richii",
+  "version": "1.0.0",
+  "description": "online mahjong calculator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkoppon/Richii.git"
+  },
+  "keywords": [
+    "Richii",
+    "mahjong"
+  ],
+  "author": "Alex K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexkoppon/Richii/issues"
+  },
+  "homepage": "https://github.com/alexkoppon/Richii#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.8.6"
+  }
+}
