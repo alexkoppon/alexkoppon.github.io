@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>Girl's Richii Mahjong</title>
+        <link rel=stylesheet href="../style/stylesheet.css">
+
+    </head>
+    <body>
+
+
+        <nav>
+            <ul>
+                <li>Mahjong</li>
+                <li>Social</li>
+            </ul>
+        </nav> 
+
+        <h1 id="pageHeader">Ultimate Richii Mahjong Association</h1>
+
+        <span>
+            <p class="intro">
+                Welcome to the Girl's Richii Mahjong Page! <br><br>
+            </p>
+            <h3 id="newsHeader">News: </h3>
+            <p>
+                This page contains information relating to playing Mahjong, and improving mahjong skills:
+                <ul>
+                    <li class="topics"><a href="scores.html">Weekly Scores</a></li>
+                    <li class="topics"><a href="rules.html">Rules</a></li>
+                    <li class="topics"><a href="open_yaku.html">Open Hand Yakus</a></li>
+                </ul>
+                And the social part of the association: 
+                <ul>
+                    <li class="topics"><a href="calendar.html">Calendar</a></li>
+                    <li class="topics"><a href="music.html">Music Playlist</a></li>
+                    <li class="topics"><a href="references.html">References / Links of interest</a></li>
+                </ul>
+            </p>
+        </span>
+
+        <h3>Calculator</h3>
+
+        <div id="tile_display">
+
+            <!-- Man Buttons -->
+            <button id="man1"><img class="tiles" src="../images/tiles/man_1.JPG"></button>
+            <button id="man2"><img class="tiles" src="../images/tiles/man_2.JPG"></button>
+            <button id="man3"><img class="tiles" src="../images/tiles/man_3.JPG"></button>
+            <button id="man4"><img class="tiles" src="../images/tiles/man_4.JPG"></button>
+            <button id="man5"><img class="tiles" src="../images/tiles/man_5.JPG"></button>
+            <button id="man6"><img class="tiles" src="../images/tiles/man_6.JPG"></button>
+            <button id="man7"><img class="tiles" src="../images/tiles/man_7.JPG"></button>
+            <button id="man8"><img class="tiles" src="../images/tiles/man_8.JPG"></button>
+            <button id="man9"><img class="tiles" src="../images/tiles/man_9.JPG"></button>
+
+            <!-- Pin Buttons -->
+            <button id="pin1"><img class="tiles" src="../images/tiles/pin_1.JPG"></button>
+            <button id="pin2"><img class="tiles" src="../images/tiles/pin_2.JPG"></button>
+            <button id="pin3"><img class="tiles" src="../images/tiles/pin_3.JPG"></button>
+            <button id="pin4"><img class="tiles" src="../images/tiles/pin_4.JPG"></button>
+            <button id="pin5"><img class="tiles" src="../images/tiles/pin_5.JPG"></button>
+            <button id="pin6"><img class="tiles" src="../images/tiles/pin_6.JPG"></button>
+            <button id="pin7"><img class="tiles" src="../images/tiles/pin_7.JPG"></button>
+            <button id="pin8"><img class="tiles" src="../images/tiles/pin_8.JPG"></button>
+            <button id="pin9"><img class="tiles" src="../images/tiles/pin_9.JPG"></button>
+
+            <!-- Stick Buttons -->
+            <button id="stick1"><img class="tiles" src="../images/tiles/stick_1.JPG"></button>
+            <button id="stick2"><img class="tiles" src="../images/tiles/stick_2.JPG"></button>
+            <button id="stick3"><img class="tiles" src="../images/tiles/stick_3.JPG"></button>
+            <button id="stick4"><img class="tiles" src="../images/tiles/stick_4.JPG"></button>
+            <button id="stick5"><img class="tiles" src="../images/tiles/stick_5.JPG"></button>
+            <button id="stick6"><img class="tiles" src="../images/tiles/stick_6.JPG"></button>
+            <button id="stick7"><img class="tiles" src="../images/tiles/stick_7.JPG"></button>
+            <button id="stick8"><img class="tiles" src="../images/tiles/stick_8.JPG"></button>
+            <button id="stick9"><img class="tiles" src="../images/tiles/stick_9.JPG"></button>
+
+            <!-- Dragon Buttons -->
+            <button id="white"><img class="tiles" src="">White Dragon</button>
+            <button id="green"><img class="tiles" src="../images/tiles/dragon_green (2).JPG"></button>
+            <button id="red"><img class="tiles" src="../images/tiles/dragon_red.JPG"></button>
+
+            <!-- Wind Buttons -->
+            <button  id="east"><img class="tiles" src="../images/tiles/wind_east.JPG"></button>
+            <button class="tiles" id="west"><img class="tiles" src="../images/tiles/wind_west.JPG"></button>
+            <button class="tiles" id="north"><img class="tiles" src="../images/tiles/wind_north.JPG"></button>
+            <button class="tiles" id="south"><img class="tiles" src="../images/tiles/wind_south.JPG"></button>
+
+        </div>
+
+        <div id="selectable_features">
+
+            <!-- Yes / No questions -->
+            <button class="selectable_features_buttons" id="richii" onclick={}>Richii</button>
+
+            <button class="selectable_features_buttons" id="ippatsu">Ippatsu</button>
+
+            <button class="selectable_features_buttons" id="lastDraw">Last Draw</button>
+
+            <button class="selectable_features_buttons" id="lastDiscard">Last Discard</button>
+
+            <button class="selectable_features_buttons" id="rinShan">Rinshan Kaihou</button>
+
+            <button class="selectable_features_buttons" id="chankan">Chankan</button>
+
+            <button class="selectable_features_buttons" id="firstRoundRichii">First Round Richii</button>
+
+
+            <!-- Tsumo or Ron-->
+            <button class=selectable_features_buttons" id="tsumo">Tsumo</button>
+            <button class=selectable_features_buttons" id="ron">Ron</button>
+
+            <!-- Wind, dora, honba -->
+
+            <!-- Side note: at some point might add the option to select Dora visually, and 
+            include akadora in the option selection instead of using the +1 -1 method -->
+
+            <label>Dora</label>            
+            <button class="selectable_features_buttons" id="dora_-">-</button>
+            <label id="dora_display"></label>
+            <button class="selectable_features_buttons" id="dora_+">+</button>
+
+            <label>Honba</label>
+            <button class="selectable_features_buttons" id="honba_-">-</button>
+            <label id="honba_display"></label>
+            <button class="selectable_features_buttons" id="honba_+">+</button>
+
+
+
+
+
+
+
+        </div>
+
+        <button id="calculate">Calculate Output</button>
+
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+        <!-- Load our React component. -->
+        <script src="richii_button.js"></script>
+
+
+        <script type="text/javascript" src="./app.js"></script>
+        <script type="text/javascript" src="./Hand.js"></script>
+        <script type="text/javascript" rc="./hand_library.js"></script>
+        <script type="text/javascript" src="./valid_hand.js"></script>
+        <script type="text/javascript" src="./valid_yaku_combinations.js"></script>
+        
+    </body>
+</html>
