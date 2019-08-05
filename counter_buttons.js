@@ -46,8 +46,7 @@ ReactDOM.render(
 class DoraButton extends React.Component {
     constructor(props) {
     super(props);
-    this.state = {on: false};
-    this.tally = 0;
+    this.state = {on: false, tally: 0};
 
     // This binding is necessary to make `this` work in the callback
     this.IncrementCounter = this.IncrementCounter.bind(this);
