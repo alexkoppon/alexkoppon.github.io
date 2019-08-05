@@ -23,6 +23,7 @@ class HonbaButton extends React.Component {
 
     DecrementCounter() {
         let newTally = (this.tally > 0 ? this.tally- 1 : 0);
+        console.log(newTally);
         this.setState({
             tally: newTally
         });
