@@ -27,7 +27,7 @@ class RichiiButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Richii
             </button>
         );
@@ -60,7 +60,7 @@ class IppatsuButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Ippatsu
             </button>
         );
@@ -91,7 +91,7 @@ class LastDrawButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Last Draw
             </button>
         );
@@ -122,7 +122,7 @@ class LastDiscardButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Last Discard
             </button>
         );
@@ -153,7 +153,7 @@ class RinshanButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Rinshan Kaihou
             </button>
         );
@@ -185,7 +185,7 @@ class ChankanButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Chankan
             </button>
         );
@@ -217,7 +217,7 @@ class FirstRoundButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 First Round Richii
             </button>
         );
@@ -248,7 +248,7 @@ class TsumoButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Tsumo
             </button>
         );
@@ -279,7 +279,7 @@ class RonButton extends React.Component {
     render() {
         let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button class="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
+            <button className="selectable_features_buttons" onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Ron
             </button>
         );
