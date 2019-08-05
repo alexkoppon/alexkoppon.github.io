@@ -15,6 +15,7 @@ class HonbaButton extends React.Component {
 
     IncrementCounter() {
         let newTally = this.tally + 1;
+        console.log(newTally);
         this.setState({
             tally: newTally
         });
