@@ -6,7 +6,7 @@ const Item = <p>Hi</p>;
 console.log("Happened");
 
 
-/*const Richii_button = React.createComponent;
+const Richii_button = React.createComponent;
 
 class RichiiButton extends React.Component {
     constructor(props) {
@@ -34,9 +34,9 @@ class RichiiButton extends React.Component {
 
 ReactDOM.render(
     <RichiiButton />, document.getElementById('richii')
-); */
+); 
 
-ReactDOM.render(
+/*ReactDOM.render(
     Item, document.getElementById('richii')
-);
+); */
 
