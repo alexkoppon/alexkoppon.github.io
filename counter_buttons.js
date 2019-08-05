@@ -16,7 +16,7 @@ class HonbaButton extends React.Component {
         let newTally = this.state.tally + 1;
         console.log(newTally);
         this.setState({
-            tally: {newTally}
+            tally: newTally
         });
         console.log(this.state.tally);
     }
@@ -25,7 +25,7 @@ class HonbaButton extends React.Component {
         let newTally = ((this.state.tally > 0) ? this.state.tally - 1 : 0);
         console.log(newTally);
         this.setState({
-            tally: {newTally}
+            tally: newTally
         });
         console.log(this.state.tally);
     }
