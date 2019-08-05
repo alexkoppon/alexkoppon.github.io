@@ -72,7 +72,7 @@ class DoraButton extends React.Component {
             <div>
                 <label>Dora</label>            
                 <button className="selectable_features_buttons" onClick={this.DecrementCounter} id="dora_-">-</button>
-                <label id="dora_display">{this.tally}</label>
+                <label id="dora_display">{this.state.tally}</label>
                 <button className="selectable_features_buttons" onClick={this.IncrementCounter} id="dora_+">+</button>
             </div>
         )           
