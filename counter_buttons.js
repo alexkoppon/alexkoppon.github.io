@@ -18,6 +18,7 @@ class HonbaButton extends React.Component {
         this.setState({
             tally: newTally
         });
+        console.log(this.tally);
     }
 
     DecrementCounter() {
@@ -25,15 +26,16 @@ class HonbaButton extends React.Component {
         this.setState({
             tally: newTally
         });
+        console.log(this.tally);
     }
 
     render() {
         return (
             <div>
                 <label>Honba</label>            
-                <button class="selectable_features_buttons" onClick={this.DecrementCount} id="honba_-">-</button>
+                <button className="selectable_features_buttons" onClick={this.DecrementCounter} id="honba_-">-</button>
                 <label id="honba_display">{this.tally}</label>
-                <button class="selectable_features_buttons" onClick={this.IncrementCounter} id="honba_+">+</button>
+                <button className="selectable_features_buttons" onClick={this.IncrementCounter} id="honba_+">+</button>
             </div>
         )           
     }
@@ -73,9 +75,9 @@ class DoraButton extends React.Component {
         return (
             <div>
                 <label>Dora</label>            
-                <button class="selectable_features_buttons" onClick={this.DecrementCount} id="dora_-">-</button>
+                <button className="selectable_features_buttons" onClick={this.DecrementCounter} id="dora_-">-</button>
                 <label id="dora_display">{this.tally}</label>
-                <button class="selectable_features_buttons" onClick={this.IncrementCounter} id="dora_+">+</button>
+                <button className="selectable_features_buttons" onClick={this.IncrementCounter} id="dora_+">+</button>
             </div>
         )           
     }
