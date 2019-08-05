@@ -10,4 +10,5 @@
     border: 1px;
     border-color: black;
     text-align: center;
+    display: inline-block;
 }
