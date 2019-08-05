@@ -26,9 +26,9 @@ class RichiiButton extends React.Component {
     
 
     render() {
-        //let colour = this.state.on ? "#FFFFFFF" : "headerBig"};
+        let bg_colour = (this.state.on ? 'cornflowerblue' : 'whitesmoke');
         return (
-            <button onClick={this.handleClick} style={this.state.on ? {background_colour: "#FFFFFFF"} : {background_colour: "#000000"}}>"
+            <button onClick={this.handleClick} style={{ backgroundColor: bg_colour}}>
                 Richii
             </button>
         );
