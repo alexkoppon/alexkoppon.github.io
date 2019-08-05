@@ -4,3 +4,10 @@
     width: 60px;
     height: 80px;
 }
+
+.selectable_features_buttons {
+    padding: 15px 32px;
+    border: 1px;
+    border-color: black;
+    text-align: center;
+}
