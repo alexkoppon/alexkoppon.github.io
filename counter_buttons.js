@@ -20,7 +20,7 @@ class HonbaButton extends React.Component {
         });
     }
 
-    DecrementCount() {
+    DecrementCounter() {
         newTally = (this.tally > 0 ? this.tally- 1 : 0);
         this.setState({
             tally: newTally
@@ -62,7 +62,7 @@ class DoraButton extends React.Component {
         });
     }
 
-    DecrementCount() {
+    DecrementCounter() {
         newTally = (this.tally > 0 ? this.tally- 1 : 0);
         this.setState({
             tally: newTally
