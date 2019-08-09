@@ -2,7 +2,7 @@
 
 // Honba Button 
 
-class HonbaButton extends React.Component {
+class HonbaButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false, tally: 0};
@@ -43,7 +43,7 @@ ReactDOM.render(
 ); 
 
 // Dora
-class DoraButton extends React.Component {
+class DoraButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false, tally: 0};

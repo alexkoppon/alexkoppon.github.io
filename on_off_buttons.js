@@ -4,7 +4,7 @@
 
 
 // Richii Button 
-class RichiiButton extends React.Component {
+class RichiiButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -43,7 +43,7 @@ ReactDOM.render(
 
 // Ippatsu Button 
 
-class IppatsuButton extends React.Component {
+class IppatsuButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -74,7 +74,7 @@ ReactDOM.render(
 
 
 // Last Draw
-class LastDrawButton extends React.Component {
+class LastDrawButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -105,7 +105,7 @@ ReactDOM.render(
 
 
 // Last Discard
-class LastDiscardButton extends React.Component {
+class LastDiscardButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -136,7 +136,7 @@ ReactDOM.render(
 
 // Rinshan
 
-class RinshanButton extends React.Component {
+class RinshanButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -168,7 +168,7 @@ ReactDOM.render(
 
 // Chankan
 
-class ChankanButton extends React.Component {
+class ChankanButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -200,7 +200,7 @@ ReactDOM.render(
 
 // First Round Richii
 
-class FirstRoundButton extends React.Component {
+class FirstRoundButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -231,7 +231,7 @@ ReactDOM.render(
 
 
 // Tsumo
-class TsumoButton extends React.Component {
+class TsumoButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -262,7 +262,7 @@ ReactDOM.render(
 
 // Ron
 
-class RonButton extends React.Component {
+class RonButton extends Post {
     constructor(props) {
     super(props);
     this.state = {on: false};
