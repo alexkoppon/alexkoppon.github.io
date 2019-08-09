@@ -13,8 +13,11 @@ calculateHand.addEventListener("click", () => {
     console.log(RichiiButton.length);
     console.log(RichiiButton.name);
     console.log(RichiiButton.getState);
-    console.log(RichiiButton.getState());
     console.log(RichiiButton.prototype);
+    console.log(RichiiButton.prototype.state);
+    console.log(RichiiButton.prototype.getState);
+
+
 
 
 });
