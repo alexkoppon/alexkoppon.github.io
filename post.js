@@ -1,6 +1,5 @@
-// import relevant modules
-import React from "react";
-import ReactDOM from "react-dom";
+'use strict';
+
 
 
 const calculateHand = document.getElementById("calculate");
