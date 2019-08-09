@@ -4,9 +4,6 @@
 
 
 // Richii Button 
-
-const Richii_button = React.createComponent;
-
 class RichiiButton extends React.Component {
     constructor(props) {
     super(props);
