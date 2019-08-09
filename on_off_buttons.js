@@ -19,6 +19,10 @@ class RichiiButton extends React.Component {
         }));
     }
 
+    getState() {
+        return this.state;
+    }
+
     
 
     render() {
