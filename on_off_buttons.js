@@ -76,7 +76,7 @@ ReactDOM.render(
 
 
 // Last Draw
-class LastDrawButton extends Post {
+class LastDrawButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
