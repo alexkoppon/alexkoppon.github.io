@@ -1,6 +1,4 @@
 'use strict';
-import { createStore } from "redux";
-import './on_off_buttons'
 import RichiiButton from "./on_off_buttons";
 
 

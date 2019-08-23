@@ -39,7 +39,6 @@ ReactDOM.render(
     <RichiiButton />, document.getElementById('richii')
 ); 
 
-export default RichiiButton;
 
 
 // Ippatsu Button 
@@ -73,7 +72,7 @@ ReactDOM.render(
     <IppatsuButton />, document.getElementById('ippatsu')
 ); 
 
-export default IppatsuButton;
+
 
 
 // Last Draw
@@ -106,7 +105,6 @@ ReactDOM.render(
     <LastDrawButton />, document.getElementById('lastDraw')
 ); 
 
-export default LastDrawButton;
 
 
 // Last Discard
@@ -139,7 +137,6 @@ ReactDOM.render(
     <LastDiscardButton />, document.getElementById('lastDiscard')
 ); 
 
-export default LastDiscardButton;
 
 // Rinshan
 
@@ -172,7 +169,6 @@ ReactDOM.render(
     <RinshanButton />, document.getElementById('rinShan')
 ); 
 
-export default RinshanButton;
 
 
 // Chankan
@@ -206,7 +202,7 @@ ReactDOM.render(
     <ChankanButton />, document.getElementById('chankan')
 ); 
 
-export default ChankanButton;
+
 
 // First Round Richii
 
@@ -239,7 +235,6 @@ ReactDOM.render(
     <FirstRoundButton />, document.getElementById('firstRoundRichii')
 ); 
 
-export default FirstRoundButton;
 
 
 // Tsumo
@@ -272,7 +267,7 @@ ReactDOM.render(
     <TsumoButton />, document.getElementById('tsumo')
 ); 
 
-export default TsumoButton;
+
 
 // Ron
 
@@ -305,4 +300,4 @@ ReactDOM.render(
     <RonButton />, document.getElementById('ron')
 ); 
 
-export default RonButton;
+
