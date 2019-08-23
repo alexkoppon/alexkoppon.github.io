@@ -4,7 +4,7 @@
 
 
 // Richii Button 
-class RichiiButton extends Post {
+class RichiiButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -39,11 +39,12 @@ ReactDOM.render(
     <RichiiButton />, document.getElementById('richii')
 ); 
 
+export default RichiiButton;
 
 
 // Ippatsu Button 
 
-class IppatsuButton extends Post {
+class IppatsuButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -71,6 +72,8 @@ class IppatsuButton extends Post {
 ReactDOM.render(
     <IppatsuButton />, document.getElementById('ippatsu')
 ); 
+
+export default IppatsuButton;
 
 
 // Last Draw
@@ -103,9 +106,11 @@ ReactDOM.render(
     <LastDrawButton />, document.getElementById('lastDraw')
 ); 
 
+export default LastDrawButton;
+
 
 // Last Discard
-class LastDiscardButton extends Post {
+class LastDiscardButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -134,9 +139,11 @@ ReactDOM.render(
     <LastDiscardButton />, document.getElementById('lastDiscard')
 ); 
 
+export default LastDiscardButton;
+
 // Rinshan
 
-class RinshanButton extends Post {
+class RinshanButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -165,10 +172,12 @@ ReactDOM.render(
     <RinshanButton />, document.getElementById('rinShan')
 ); 
 
+export default RinshanButton;
+
 
 // Chankan
 
-class ChankanButton extends Post {
+class ChankanButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -197,10 +206,11 @@ ReactDOM.render(
     <ChankanButton />, document.getElementById('chankan')
 ); 
 
+export default ChankanButton;
 
 // First Round Richii
 
-class FirstRoundButton extends Post {
+class FirstRoundButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -229,9 +239,11 @@ ReactDOM.render(
     <FirstRoundButton />, document.getElementById('firstRoundRichii')
 ); 
 
+export default FirstRoundButton;
+
 
 // Tsumo
-class TsumoButton extends Post {
+class TsumoButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -260,9 +272,11 @@ ReactDOM.render(
     <TsumoButton />, document.getElementById('tsumo')
 ); 
 
+export default TsumoButton;
+
 // Ron
 
-class RonButton extends Post {
+class RonButton extends React.Component {
     constructor(props) {
     super(props);
     this.state = {on: false};
@@ -290,3 +304,5 @@ class RonButton extends Post {
 ReactDOM.render(
     <RonButton />, document.getElementById('ron')
 ); 
+
+export default RonButton;
