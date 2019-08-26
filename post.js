@@ -1,6 +1,3 @@
-'use strict';
-import RichiiButton from "./on_off_buttons";
-
 
 
 const calculateHand = document.getElementById("calculate");

@@ -73,7 +73,7 @@ class DoraButton extends React.Component {
     IncrementCounter() {
         let newTally = this.state.tally + 1;
         store.dispatch(updateCounter("Dora", newTally));
-        console.log(store.getState());
+        Console.log(store.getState());
         this.setState({
             tally: newTally
         });
