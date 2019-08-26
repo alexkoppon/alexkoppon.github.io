@@ -1,10 +1,9 @@
 'use strict';
 
-import { createStore } from 'redux';
 
 
-const store = createStore(states, ['Use Redux']);
-const hand = createStore(tiles, ['Use Redux']);
+const store = require('redux').createStore;
+const hand = require('redux').createStore;
 
 
 function updateCounter(button_ID, counter) {
