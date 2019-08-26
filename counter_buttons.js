@@ -1,5 +1,19 @@
 'use strict';
 
+import { createStore } from 'redux';
+
+
+const store = createStore(states, ['Use Redux']);
+const hand = createStore(tiles, ['Use Redux']);
+
+
+function updateCounter(button_ID, counter) {
+    return {
+      type: button_ID,
+      counter
+    }
+}
+
 // Honba Button 
 
 class HonbaButton extends React.Component {
@@ -14,6 +28,7 @@ class HonbaButton extends React.Component {
 
     IncrementCounter() {
         let newTally = this.state.tally + 1;
+        store.dispatch(updateCounter("Honba", newTally));
         this.setState({
             tally: newTally
         });
@@ -21,9 +36,11 @@ class HonbaButton extends React.Component {
 
     DecrementCounter() {
         let newTally = ((this.state.tally > 0) ? this.state.tally - 1 : 0);
+        store.dispatch(updateCounter("Honba", newTally));
         this.setState({
             tally: newTally
         });
+
     }
 
     render() {
@@ -55,6 +72,8 @@ class DoraButton extends React.Component {
 
     IncrementCounter() {
         let newTally = this.state.tally + 1;
+        store.dispatch(updateCounter("Dora", newTally));
+        console.log(store.getState());
         this.setState({
             tally: newTally
         });
@@ -62,6 +81,7 @@ class DoraButton extends React.Component {
 
     DecrementCounter() {
         let newTally = ((this.state.tally > 0) ? this.state.tally - 1 : 0);
+        store.dispatch(updateCounter("Dora", newTally));
         this.setState({
             tally: newTally
         });

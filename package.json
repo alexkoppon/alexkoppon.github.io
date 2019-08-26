@@ -22,6 +22,7 @@
   "homepage": "https://github.com/alexkoppon/Richii#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "redux": "^4.0.4"
   }
 }
