@@ -1,6 +1,6 @@
 
 
-const calculateHand = document.getElementById("calculate");
+/*const calculateHand = document.getElementById("calculate");
 
 calculateHand.addEventListener("click", () => {
 
@@ -18,3 +18,4 @@ calculateHand.addEventListener("click", () => {
 
 });
 
+*/

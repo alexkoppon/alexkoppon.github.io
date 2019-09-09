@@ -1,11 +1,6 @@
 'use strict';
 
 
-
-const store = require('redux').createStore;
-const hand = require('redux').createStore;
-
-
 function updateCounter(button_ID, counter) {
     return {
       type: button_ID,
