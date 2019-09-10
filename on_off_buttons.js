@@ -25,7 +25,7 @@ class RichiiButton extends React.Component {
     }
 
     handleClick() {
-        if (state.on) {
+        if (this.state.on) {
             all_states.set("Richii", true);
         } else {
             all_states.set("Richii", false);
