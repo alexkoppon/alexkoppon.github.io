@@ -1,7 +1,7 @@
 'use strict';
 
 
-var state = new Map();
+var all_states = new Map();
 
 
 const calculateHand = document.getElementById("calculate");
@@ -9,8 +9,7 @@ const calculateHand = document.getElementById("calculate");
 calculateHand.addEventListener("click", () => {
 
     // get the status of the relevant buttons etc 
-    state.set("Richii", RichiiButton.getState());
-    console.log(state.get("Richii"));
+    console.log(all_states.get("Richii"));
 
 });
 
@@ -26,6 +25,11 @@ class RichiiButton extends React.Component {
     }
 
     handleClick() {
+        if (state.on) {
+            all_states.set("Richii", true);
+        } else {
+            all_states.set("Richii", false);
+        }
         this.setState(state => ({
             on: !state.on
         }));
