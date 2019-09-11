@@ -38,8 +38,10 @@ class SelectionButtons extends React.Component {
     ponClick() {
         if (this.state.pon) {
             pon_selected = false;
-        } else {
+        } else if (remaining_tiles >= 3 && !this.state.pon) {
             pon_selected = true;
+        } else {
+            pon_selected = false;
         }
         this.setState(state => ({
             pon: !state.pon,
@@ -52,8 +54,10 @@ class SelectionButtons extends React.Component {
     chiClick() {
         if (this.state.chi) {
             chi_selected = false;
-        } else {
+        } else if (remaining_tiles >= 3 && !this.state.chi) {
             chi_selected = true;
+        } else {
+            chi_selected = false;
         }
         this.setState(state => ({
             pon: false,
@@ -66,8 +70,10 @@ class SelectionButtons extends React.Component {
     openClick() {
         if (this.state.open_kan) {
             open_kan_selected = false;
-        } else {
+        } else if (remaining_tiles >= 4 && !this.state.open_kan) {
             open_kan_selected = true;
+        } else {
+            open_kan_selected = false;
         }
         this.setState(state => ({
             pon: false,
@@ -78,10 +84,12 @@ class SelectionButtons extends React.Component {
     }
 
     closedClick() {
-        if (this.state.pon) {
+        if (this.state.closed_kan) {
             closed_kan_selected = false;
-        } else {
+        } else if (remaining_tiles >= 4 && !this.state.closed_kan) {
             closed_kan_selected = true;
+        } else {
+            closed_kan_selected = false;
         }
         this.setState(state => ({
             pon: false,
@@ -135,33 +143,33 @@ for (var i = 1; i < 10; i++) {
     var id = "pin"+i;
     console.log(id);
     var pin = document.getElementById(id);
-    console.log(pin);
     pin.addEventListener("click", () => {
-        //console.log(target);
-        console.log(event.target);
-        console.log(event.currentTarget);
-        console.log(event.currentTarget.id);
-        console.log(pin);
         if (pon_selected) {
-            tile_map.set("Pon", this.id);
+            tile_map.set("Pon", event.currentTarget.id);
             console.log("pon");
             remaining_tiles -= 3;
+            console.log(remaining_tiles);
             updateState();
-        } else if (chi_selected) {}
+        } else if (chi_selected) {
+            updateState();
+        }
         else if (open_kan_selected) {
-            tile_map.set("Open", this.id);
+            tile_map.set("Open", event.currentTarget.id);
             console.log("open");
             remaining_tiles -= 4;
             updateState();
+            console.log(remaining_tiles);
         } else if (closed_kan_selected) {
-            tile_map.set("Closed", this.id);
+            tile_map.set("Closed", event.currentTarget.id);
             console.log("closed");
             remaining_tiles -= 4;
+            console.log(remaining_tiles);
             updateState();
         } else if (remaining_tiles >= 1) {
-            tile_map.set("Single", this.id);
+            tile_map.set("Single", event.currentTarget.id);
             console.log("single");
             remaining_tiles -= 1;
+            console.log(remaining_tiles);
             updateState();
         }
     });
