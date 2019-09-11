@@ -137,6 +137,7 @@ for (var i = 1; i < 10; i++) {
     console.log(id);
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
+        console.log("occurance");
         if (pon_selected) {
             tile_map.set("Pon", event.currentTarget.id);
             console.log("pon");
