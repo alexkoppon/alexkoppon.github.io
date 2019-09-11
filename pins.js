@@ -117,68 +117,63 @@ class SelectionButtons extends React.Component {
 }
 
 ReactDOM.render(
-    <SelectionButtons />, document.getElementById('pon')
+    <SelectionButtons />, document.getElementById('multi-selection')
 ); 
 
 
+// Tile Display
 
-const man1 = document.getElementById("man1");
-const man2 = document.getElementById("man2");
-const man3 = document.getElementById("man3");
-const man4 = document.getElementById("man4");
-const man5 = document.getElementById("man5");
-const man6 = document.getElementById("man6");
-const man7 = document.getElementById("man7");
-const man8 = document.getElementById("man8");
-const man9 = document.getElementById("man9");
+var tile_display_div = document.getElementById("chosen_tile_display");
 
+function setTile(event) {
+    console.log("occurance");
+    if (pon_selected) {
+        tile_map.set("Pon", event.currentTarget.id);
+        console.log("pon");
+        remaining_tiles -= 3;
+        console.log(remaining_tiles);
+        updateState();
+    } else if (chi_selected) {
+        updateState();
+    } else if (open_kan_selected) {
+        tile_map.set("Open", event.currentTarget.id);
+        console.log("open");
+        remaining_tiles -= 4;
+        updateState();
+        console.log(remaining_tiles);
+    } else if (closed_kan_selected) {
+        tile_map.set("Closed", event.currentTarget.id);
+        console.log("closed");
+        remaining_tiles -= 4;
+        console.log(remaining_tiles);
+        updateState();
+    } else if (remaining_tiles >= 1) {
+        tile_map.set("Single", event.currentTarget.id);
+        console.log("single");
+        remaining_tiles -= 1;
+        console.log(remaining_tiles);
+        updateState();
+    }
+}
+
+function updateTileDisplayDiv(pic) {
+    var source_path = "../images/tiles/" + pic + ".JPG"
+    tile_display_div.appendChild(<img id={pic+"_disp"} class="tiles" src={source_path}></img>);
+}
+
+// Man Tiles
+
+// Pin Tiles
 for (var i = 1; i < 10; i++) {
-    var id = "pin"+i;
-    console.log(id);
+    var id = "pin_"+i;
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
-        console.log("occurance");
-        console.log(pon_selected);
-        console.log(chi_selected);
-        if (pon_selected) {
-            tile_map.set("Pon", event.currentTarget.id);
-            console.log("pon");
-            remaining_tiles -= 3;
-            console.log(remaining_tiles);
-            updateState();
-        } else if (chi_selected) {
-            updateState();
-        } else if (open_kan_selected) {
-            tile_map.set("Open", event.currentTarget.id);
-            console.log("open");
-            remaining_tiles -= 4;
-            updateState();
-            console.log(remaining_tiles);
-        } else if (closed_kan_selected) {
-            tile_map.set("Closed", event.currentTarget.id);
-            console.log("closed");
-            remaining_tiles -= 4;
-            console.log(remaining_tiles);
-            updateState();
-        } else if (remaining_tiles >= 1) {
-            tile_map.set("Single", event.currentTarget.id);
-            console.log("single");
-            remaining_tiles -= 1;
-            console.log(remaining_tiles);
-            updateState();
-        }
+        setTile(event);
+        updateTileDisplayDiv(event.currentTarget.id);
     });
 }
 
-/*const calculateHand = document.getElementById("pin1");
-const calculateHand = document.getElementById("pin2");
-const calculateHand = document.getElementById("pin3");
-const calculateHand = document.getElementById("pin4");
-const calculateHand = document.getElementById("pin5");
-const calculateHand = document.getElementById("pin6");
-const calculateHand = document.getElementById("pin7");
-const calculateHand = document.getElementById("pin8");
-const calculateHand = document.getElementById("pin9");
+/*
 
 const calculateHand = document.getElementById("stick1");
 const calculateHand = document.getElementById("stick2");
@@ -198,3 +193,5 @@ const calculateHand = document.getElementById("east");
 const calculateHand = document.getElementById("west");
 const calculateHand = document.getElementById("north");
 const calculateHand = document.getElementById("south"); */
+
+
