@@ -36,87 +36,60 @@ class SelectionButtons extends React.Component {
     }
 
     ponClick() {
-        if (this.state.pon) {
-            pon_selected = false;
-        } else if (remaining_tiles >= 3 && !this.state.pon) {
-            pon_selected = true;
-        } else {
-            pon_selected = false;
-        }
+        if (remaining_tiles >= 3) {
+            pon_selected = !this.state.pon;
+            this.setState(state => ({
+                pon: !state.pon,
+                chi: false,
+                open_kan: false,
+                closed_kan: false
+            }));  
+        } else { pon_selected = false; }
 
-        chi_selected = false;
-        open_kan_selected = false;
-        closed_kan_selected = false;
-
-        this.setState(state => ({
-            pon: !state.pon,
-            chi: false,
-            open_kan: false,
-            closed_kan: false
-        }));  
+        chi_selected = false; open_kan_selected = false; closed_kan_selected = false;       
     }
 
     chiClick() {
-        if (this.state.chi) {
-            chi_selected = false;
-        } else if (remaining_tiles >= 3 && !this.state.chi) {
-            chi_selected = true;
-        } else {
-            chi_selected = false;
-        }
+        if (remaining_tiles >= 3) {
+            chi_selected = !this.state.chi;
+            this.setState(state => ({
+                pon: false,
+                chi: !state.chi,
+                open_kan: false,
+                closed_kan: false
+            }));     
+        } else { chi_selected = false; }
 
-        pon_selected = false;
-        open_kan_selected = false;
-        closed_kan_selected = false;
-
-        this.setState(state => ({
-            pon: false,
-            chi: !state.chi,
-            open_kan: false,
-            closed_kan: false
-        }));     
+        pon_selected = false; open_kan_selected = false; closed_kan_selected = false;      
     }
 
     openClick() {
-        if (this.state.open_kan) {
-            open_kan_selected = false;
-        } else if (remaining_tiles >= 4 && !this.state.open_kan) {
-            open_kan_selected = true;
-        } else {
-            open_kan_selected = false;
-        }
+        if (remaining_tiles >= 4) {
+            open_kan_selected = !this.state.open_kan;
+            this.setState(state => ({
+                pon: false,
+                chi: false,
+                open_kan: !state.open_kan,
+                closed_kan: false
+            }));   
+        } else { open_kan_selected = false; }
 
-        pon_selected = false;
-        chi_selected = false;
-        closed_kan_selected = false;
-
-        this.setState(state => ({
-            pon: false,
-            chi: false,
-            open_kan: !state.open_kan,
-            closed_kan: false
-        }));   
+        pon_selected = false; chi_selected = false; closed_kan_selected = false;      
     }
 
     closedClick() {
-        if (this.state.closed_kan) {
-            closed_kan_selected = false;
-        } else if (remaining_tiles >= 4 && !this.state.closed_kan) {
-            closed_kan_selected = true;
-        } else {
-            closed_kan_selected = false;
-        }
+        if (remaining_tiles >= 4) {
+            closed_kan_selected = !this.state.closed_kan;
+            this.setState(state => ({
+                pon: false,
+                chi: false,
+                open_kan: false,
+                closed_kan: !state.closed_kan
+            })); 
+            return; 
+        } else { closed_kan_selected = false; }
 
-        pon_selected = false;
-        chi_selected = false;
-        open_kan_selected = false;
-
-        this.setState(state => ({
-            pon: false,
-            chi: false,
-            open_kan: false,
-            closed_kan: !state.closed_kan
-        }));     
+        pon_selected = false; chi_selected = false; open_kan_selected = false;      
     }
 
     render() {
@@ -172,8 +145,7 @@ for (var i = 1; i < 10; i++) {
             updateState();
         } else if (chi_selected) {
             updateState();
-        }
-        else if (open_kan_selected) {
+        } else if (open_kan_selected) {
             tile_map.set("Open", event.currentTarget.id);
             console.log("open");
             remaining_tiles -= 4;
