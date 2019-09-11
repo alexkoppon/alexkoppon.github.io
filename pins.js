@@ -137,7 +137,7 @@ for (var i = 1; i < 10; i++) {
     var pin = document.getElementById(id);
     console.log(pin);
     pin.addEventListener("click", () => {
-        console.log(target);
+        //console.log(target);
         console.log(event.target);
         console.log(pin);
         if (pon_selected) {
