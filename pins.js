@@ -156,10 +156,21 @@ function setTile(event) {
     }
 }
 
-function updateTileDisplayDiv(pic) {
-    var source_path = "../images/tiles/" + pic + ".JPG"
-    tile_display_div.appendChild(<img id={pic+"_disp"} class="tiles" src={source_path}></img>);
+ReactDOM.render(<Tiles />,document.getElementById('chosen_tile_display'));
+
+class Tiles extends Component {
+    render() {
+        return (
+            <div>
+                {tile_map.map(tile => {
+                    console.log(tile);
+                    return (<img id={tile.value +"_disp"} class="tiles" src={"../images/tiles/" + tile.value + ".JPG"}></img>);
+                })}
+            </div>
+        )
+    }
 }
+
 
 // Man Tiles
 
