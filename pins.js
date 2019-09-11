@@ -157,7 +157,7 @@ for (i = 1; i < 10; i++) {
     });
 }
 
-const calculateHand = document.getElementById("pin1");
+/*const calculateHand = document.getElementById("pin1");
 const calculateHand = document.getElementById("pin2");
 const calculateHand = document.getElementById("pin3");
 const calculateHand = document.getElementById("pin4");
@@ -184,4 +184,4 @@ const calculateHand = document.getElementById("red");
 const calculateHand = document.getElementById("east");
 const calculateHand = document.getElementById("west");
 const calculateHand = document.getElementById("north");
-const calculateHand = document.getElementById("south");
+const calculateHand = document.getElementById("south"); */
