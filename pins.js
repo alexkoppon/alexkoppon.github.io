@@ -180,7 +180,7 @@ for (var i = 1; i < 10; i++) {
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
         setTile(event);
-        updateTileDisplayDiv(event.currentTarget.id);
+        //updateTileDisplayDiv(event.currentTarget.id);
     });
 }
 
