@@ -161,9 +161,9 @@ class Tiles extends React.Component {
     render() {
         return (
             <div>
-                {tile_map.map(tile => {
-                    console.log(tile);
-                    return (<img id={tile.value +"_disp"} class="tiles" src={"../images/tiles/" + tile.value + ".JPG"}></img>);
+                {tile_map.values(value => {
+                    console.log(value);
+                    return (<img id={value +"_disp"} class="tiles" src={"../images/tiles/" + value + ".JPG"}></img>);
                 })}
             </div>
         )
