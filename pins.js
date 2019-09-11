@@ -59,7 +59,7 @@ class SelectionButtons extends React.Component {
                 closed_kan: false
             }));     
         } else { chi_selected = false; }
-
+        console.log(chi_selected);
         pon_selected = false; open_kan_selected = false; closed_kan_selected = false;      
     }
 
@@ -138,6 +138,8 @@ for (var i = 1; i < 10; i++) {
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
         console.log("occurance");
+        console.log(pon_selected);
+        console.log(chi_selected);
         if (pon_selected) {
             tile_map.set("Pon", event.currentTarget.id);
             console.log("pon");
