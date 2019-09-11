@@ -156,9 +156,8 @@ function setTile(event) {
     }
 }
 
-ReactDOM.render(<Tiles />,document.getElementById('chosen_tile_display'));
 
-class Tiles extends Component {
+class Tiles extends React.Component {
     render() {
         return (
             <div>
@@ -171,6 +170,7 @@ class Tiles extends Component {
     }
 }
 
+ReactDOM.render(<Tiles />,document.getElementById('chosen_tile_display'));
 
 // Man Tiles
 
