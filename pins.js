@@ -43,6 +43,11 @@ class SelectionButtons extends React.Component {
         } else {
             pon_selected = false;
         }
+
+        chi_selected = false;
+        open_kan_selected = false;
+        closed_kan_selected = false;
+
         this.setState(state => ({
             pon: !state.pon,
             chi: false,
@@ -59,6 +64,11 @@ class SelectionButtons extends React.Component {
         } else {
             chi_selected = false;
         }
+
+        pon_selected = false;
+        open_kan_selected = false;
+        closed_kan_selected = false;
+
         this.setState(state => ({
             pon: false,
             chi: !state.chi,
@@ -75,6 +85,11 @@ class SelectionButtons extends React.Component {
         } else {
             open_kan_selected = false;
         }
+
+        pon_selected = false;
+        chi_selected = false;
+        closed_kan_selected = false;
+
         this.setState(state => ({
             pon: false,
             chi: false,
@@ -91,6 +106,11 @@ class SelectionButtons extends React.Component {
         } else {
             closed_kan_selected = false;
         }
+
+        pon_selected = false;
+        chi_selected = false;
+        open_kan_selected = false;
+
         this.setState(state => ({
             pon: false,
             chi: false,
