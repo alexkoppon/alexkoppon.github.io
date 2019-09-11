@@ -131,26 +131,30 @@ const man7 = document.getElementById("man7");
 const man8 = document.getElementById("man8");
 const man9 = document.getElementById("man9");
 
-for (i = 1; i < 10; i++) {
+for (var i = 1; i < 10; i++) {
     var id = "pin"+i;
     console.log(id);
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
         if (pon_selected) {
             tile_map.set("Pon", this.id);
+            console.log("pon");
             remaining_tiles -= 3;
             updateState();
         } else if (chi_selected) {}
         else if (open_kan_selected) {
             tile_map.set("Open", this.id);
+            console.log("open");
             remaining_tiles -= 4;
             updateState();
         } else if (closed_kan_selected) {
             tile_map.set("Closed", this.id);
+            console.log("closed");
             remaining_tiles -= 4;
             updateState();
         } else if (remaining_tiles >= 1) {
             tile_map.set("Single", this.id);
+            console.log("single");
             remaining_tiles -= 1;
             updateState();
         }
