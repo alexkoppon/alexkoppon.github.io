@@ -169,6 +169,7 @@ function tileDisplay() {
 
 class Tiles extends React.Component {
     render() {
+        console.log("reaced");
         return (
             <div>
                 {tile_map.values(value => {
