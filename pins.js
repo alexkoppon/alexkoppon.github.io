@@ -172,7 +172,7 @@ class Tiles extends React.Component {
         console.log("reaced");
         return (
             <div>
-                {tile_map.values(value => {
+                {tile_map.values().map(value => {
                     console.log("value " + value);
                     return (<img id={value +"_disp"} class="tiles" src={"../images/tiles/" + value + ".JPG"}></img>);
                 })}
