@@ -170,11 +170,13 @@ function tileDisplay() {
 class Tiles extends React.Component {
     render() {
         console.log("reaced");
+        console.log([tile_map.values()]);
+        console.log([tile_map.values()].map(value => {console.log(value.next)}))
         return (
             <div>
                 {[tile_map.values()].map(value => {
                     console.log("value " + value);
-                    return (<img id={value +"_disp"} class="tiles" src={"../images/tiles/" + value + ".JPG"}></img>);
+                    return (<img key={value +"_disp"} id={value +"_disp"} className="tiles" src={"../images/tiles/" + value + ".JPG"}></img>);
                 })}
             </div>
         )
