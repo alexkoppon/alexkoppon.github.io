@@ -127,11 +127,14 @@ var tile_display_div = document.getElementById("chosen_tile_display");
 
 function setTile(event) {
     console.log("occurance");
+    console.log(pon_selected);
+    console.log(event.currentTarget.id);
+    console.log(remaining_tiles);
     if (pon_selected) {
         tile_map.set("Pon", event.currentTarget.id);
         console.log("pon");
         remaining_tiles -= 3;
-        console.log(remaining_tiles);
+        //console.log(remaining_tiles);
         updateState();
     } else if (chi_selected) {
         updateState();
@@ -140,23 +143,24 @@ function setTile(event) {
         console.log("open");
         remaining_tiles -= 4;
         updateState();
-        console.log(remaining_tiles);
+        //console.log(remaining_tiles);
     } else if (closed_kan_selected) {
         tile_map.set("Closed", event.currentTarget.id);
         console.log("closed");
         remaining_tiles -= 4;
-        console.log(remaining_tiles);
+        //console.log(remaining_tiles);
         updateState();
     } else if (remaining_tiles >= 1) {
         tile_map.set("Single", event.currentTarget.id);
         console.log("single");
         remaining_tiles -= 1;
-        console.log(remaining_tiles);
+        //console.log(remaining_tiles);
         updateState();
     }
 }
 
 function tileDisplay() {
+    console.log("update tiles");
     ReactDOM.render(<Tiles />,document.getElementById('chosen_tile_display'));
 }
 
