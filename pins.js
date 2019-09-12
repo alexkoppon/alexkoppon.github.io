@@ -156,6 +156,10 @@ function setTile(event) {
     }
 }
 
+function tileDisplay() {
+    ReactDOM.render(<Tiles />,document.getElementById('chosen_tile_display'));
+}
+
 
 class Tiles extends React.Component {
     render() {
@@ -173,6 +177,15 @@ class Tiles extends React.Component {
 ReactDOM.render(<Tiles />,document.getElementById('chosen_tile_display'));
 
 // Man Tiles
+for (var i = 1; i < 10; i++) {
+    var id = "man_"+i;
+    var man = document.getElementById(id);
+    man.addEventListener("click", () => {
+        setTile(event);
+        tileDisplay();
+        //updateTileDisplayDiv(event.currentTarget.id);
+    });
+}
 
 // Pin Tiles
 for (var i = 1; i < 10; i++) {
@@ -180,29 +193,38 @@ for (var i = 1; i < 10; i++) {
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
         setTile(event);
+        tileDisplay();
+    });
+}
+
+// Stick tiles 
+for (var i = 1; i < 10; i++) {
+    var id = "stick_"+i;
+    var stick = document.getElementById(id);
+    stick.addEventListener("click", () => {
+        setTile(event);
+        tileDisplay();
         //updateTileDisplayDiv(event.currentTarget.id);
     });
 }
 
-/*
+// Dragon tiles 
+var dragon_tile_ids = ["white_dragon", "dragon_green", "dragon_red"];
+for (var i = 0; i < dragon_tile_ids.length; i++ ) {
+    var dragon = document.getElementById(dragon_tile_ids[i]);
+    dragon.addEventListener("click", () => {
+        setTile(event);
+        tileDisplay();
+    });
+}
 
-const calculateHand = document.getElementById("stick1");
-const calculateHand = document.getElementById("stick2");
-const calculateHand = document.getElementById("stick3");
-const calculateHand = document.getElementById("stick4");
-const calculateHand = document.getElementById("stick5");
-const calculateHand = document.getElementById("stick6");
-const calculateHand = document.getElementById("stick7");
-const calculateHand = document.getElementById("stick8");
-const calculateHand = document.getElementById("stick9");
-
-const calculateHand = document.getElementById("white");
-const calculateHand = document.getElementById("green");
-const calculateHand = document.getElementById("red");
-
-const calculateHand = document.getElementById("east");
-const calculateHand = document.getElementById("west");
-const calculateHand = document.getElementById("north");
-const calculateHand = document.getElementById("south"); */
-
+// Wind tiles 
+var wind_tile_ids = ["wind_east", "wind_west", "wind_north", "wind_south"]; 
+for (var i = 0; i < wind_tile_ids.length; i++ ) {
+    var wind = document.getElementById(wind_tile_ids[i]);
+    wind.addEventListener("click", () => {
+        setTile(event);
+        tileDisplay();
+    });
+}
 
