@@ -171,7 +171,9 @@ class Tiles extends React.Component {
     render() {
         console.log("reaced");
         console.log([tile_map.values()]);
-        console.log([tile_map.values()].map(value => {console.log(value.next)}))
+        console.log(tile_map.values().map(value => {console.log(value)}));
+        console.log(tile_map.values(value => {console.log(value.next)}));
+
         return (
             <div>
                 {[tile_map.values()].map(value => {
