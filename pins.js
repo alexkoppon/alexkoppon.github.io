@@ -127,9 +127,9 @@ var tile_display_div = document.getElementById("chosen_tile_display");
 
 function setTile(event) {
     console.log("occurance");
-    console.log(pon_selected);
-    console.log(event.currentTarget.id);
-    console.log(remaining_tiles);
+    console.log("pon " + pon_selected);
+    console.log("id " + event.currentTarget.id);
+    console.log("remaining " + remaining_tiles);
     if (pon_selected) {
         tile_map.set("Pon", event.currentTarget.id);
         console.log("pon");
@@ -157,6 +157,8 @@ function setTile(event) {
         //console.log(remaining_tiles);
         updateState();
     }
+    console.log(tile_map.values());
+
 }
 
 function tileDisplay() {
@@ -170,7 +172,7 @@ class Tiles extends React.Component {
         return (
             <div>
                 {tile_map.values(value => {
-                    console.log(value);
+                    console.log("value " + value);
                     return (<img id={value +"_disp"} class="tiles" src={"../images/tiles/" + value + ".JPG"}></img>);
                 })}
             </div>
