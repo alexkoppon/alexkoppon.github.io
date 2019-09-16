@@ -177,6 +177,10 @@ class Tiles extends React.Component {
             console.log(element);
             console.log(element.tile);    
         });
+        tile_map.forEach(element => {
+            console.log(element.value);
+            console.log(element.value.tile);    
+        });
 
         return (
             <div>
