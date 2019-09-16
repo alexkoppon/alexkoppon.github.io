@@ -187,7 +187,7 @@ class Tiles extends React.Component {
             <div>
                 {tile_map.forEach(value => {
                     console.log("value " + value.tile);
-                    return (<img key={value.tile +"_disp"} id={value.tile +"_disp"} className="tiles" src={"../images/tiles/" + value.tile + ".JPG"}></img>);
+                    <img key={value.tile +"_disp"} id={value.tile +"_disp"} className="tiles" src={"../images/tiles/" + value.tile + ".JPG"}></img>;
                 })}
             </div>
         )
