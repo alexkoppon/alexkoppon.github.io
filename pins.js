@@ -170,24 +170,24 @@ function tileDisplay() {
 class Tiles extends React.Component {
     render() {
         console.log("reached");
-        console.log([tile_map.values()]);
+        /*console.log([tile_map.values()]);
         console.log([tile_map.values()].map(element => {console.log(element.value)}));
-        console.log(tile_map.values());
+        console.log(tile_map.values());*/
         /*(tile_map.values()).forEach(element => {
             console.log(element);
             console.log(element.tile);    
         });*/
         tile_map.forEach(element => {
             console.log(element);
-            console.log(element.value);
-            //console.log(element.value.tile);    
+            console.log(element.tile);
+            console.log(element.type);    
         });
 
         return (
             <div>
-                {[tile_map.values()].map(value => {
-                    console.log("value " + value);
-                    return (<img key={value +"_disp"} id={value +"_disp"} className="tiles" src={"../images/tiles/" + value + ".JPG"}></img>);
+                {tile_map.forEach(value => {
+                    console.log("value " + value.tile);
+                    return (<img key={value.tile +"_disp"} id={value.tile +"_disp"} className="tiles" src={"../images/tiles/" + value.tile + ".JPG"}></img>);
                 })}
             </div>
         )
