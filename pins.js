@@ -131,7 +131,7 @@ function setTile(event) {
     console.log("id " + event.currentTarget.id);
     console.log("remaining " + remaining_tiles);
     if (pon_selected) {
-        tile_map.set("Pon", event.currentTarget.id);
+        tile_map.set((15-remaining_tiles), {type: "pon", tile: event.currentTarget.id});
         console.log("pon");
         remaining_tiles -= 3;
         //console.log(remaining_tiles);
@@ -139,19 +139,19 @@ function setTile(event) {
     } else if (chi_selected) {
         updateState();
     } else if (open_kan_selected) {
-        tile_map.set("Open", event.currentTarget.id);
+        tile_map.set((15-remaining_tiles), {type: "open", tile: event.currentTarget.id});
         console.log("open");
         remaining_tiles -= 4;
         updateState();
         //console.log(remaining_tiles);
     } else if (closed_kan_selected) {
-        tile_map.set("Closed", event.currentTarget.id);
+        tile_map.set((15-remaining_tiles), {type: "closed", tile: event.currentTarget.id});
         console.log("closed");
         remaining_tiles -= 4;
         //console.log(remaining_tiles);
         updateState();
     } else if (remaining_tiles >= 1) {
-        tile_map.set("Single", event.currentTarget.id);
+        tile_map.set((15-remaining_tiles), {type: "single", tile: event.currentTarget.id});
         console.log("single");
         remaining_tiles -= 1;
         //console.log(remaining_tiles);
@@ -169,10 +169,14 @@ function tileDisplay() {
 
 class Tiles extends React.Component {
     render() {
-        console.log("reaced");
+        console.log("reached");
         console.log([tile_map.values()]);
-        console.log(tile_map.values().map(value => {console.log(value)}));
-        console.log(tile_map.values(value => {console.log(value.next)}));
+        console.log(tile_map.values().map(value => {console.log(value.tile)}));
+        console.log(tile_map.values());
+        tile_map.values().array.forEach(element => {
+            console.log(element);
+            console.log(element.tile);    
+        });
 
         return (
             <div>
