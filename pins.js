@@ -206,7 +206,7 @@ for (var i = 1; i < 10; i++) {
     var man = document.getElementById(id);
     man.addEventListener("click", () => {
         setTile(event);
-        //tileDisplay();
+        tileDisplay();
         //updateTileDisplayDiv(event.currentTarget.id);
     });
 }
@@ -217,7 +217,7 @@ for (var i = 1; i < 10; i++) {
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
         setTile(event);
-        //tileDisplay();
+        tileDisplay();
     });
 }
 
@@ -227,7 +227,7 @@ for (var i = 1; i < 10; i++) {
     var stick = document.getElementById(id);
     stick.addEventListener("click", () => {
         setTile(event);
-        //tileDisplay();
+        tileDisplay();
         //updateTileDisplayDiv(event.currentTarget.id);
     });
 }
@@ -238,7 +238,7 @@ for (var i = 0; i < dragon_tile_ids.length; i++ ) {
     var dragon = document.getElementById(dragon_tile_ids[i]);
     dragon.addEventListener("click", () => {
         setTile(event);
-        //tileDisplay();
+        tileDisplay();
     });
 }
 
@@ -248,7 +248,7 @@ for (var i = 0; i < wind_tile_ids.length; i++ ) {
     var wind = document.getElementById(wind_tile_ids[i]);
     wind.addEventListener("click", () => {
         setTile(event);
-        //tileDisplay();
+        tileDisplay();
     });
 }
 
