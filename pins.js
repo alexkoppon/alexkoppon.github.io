@@ -170,11 +170,11 @@ function tileDisplay() {
 class Tiles extends React.Component {
     render() {
         console.log("reached");
-        let counter = -1;
+        var counter = -1;
         let images = tile_map.forEach(value => {
             counter ++;
             console.log('went round');
-            return <img key={value.tile +"_disp_"+counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>;
+            return <img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>;
             
         })
         console.log(images);
