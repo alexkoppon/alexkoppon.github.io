@@ -173,7 +173,7 @@ class Tiles extends React.Component {
         var counter = -1;
         let images = tile_map.forEach(value => {
             counter ++;
-            console.log('went round');
+            console.log('went round', counter);
             return <img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>;
             
         })
