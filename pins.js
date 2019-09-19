@@ -171,10 +171,11 @@ class Tiles extends React.Component {
     render() {
         console.log("reached");
         var counter = -1;
-        let images = tile_map.forEach(value => {
+        var images= []; 
+        tile_map.forEach(value => {
             counter ++;
             console.log('went round', counter);
-            return <img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>;
+            images.push(<img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
             
         })
         console.log(images);
