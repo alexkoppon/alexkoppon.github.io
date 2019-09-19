@@ -170,12 +170,23 @@ function tileDisplay() {
 class Tiles extends React.Component {
     render() {
         console.log("reached");
-        var counter = -1;
+        var counter = 0;
         var images= []; 
         tile_map.forEach(value => {
-            counter ++;
             console.log('went round', counter);
-            images.push(<img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+            if (value.type == 'pon' || value.type == 'chi') {
+                images.push(<img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+                images.push(<img key={++counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+                images.push(<img key={++counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+            } else if (value.type == 'closed' || value.type == 'open') {
+                images.push(<img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+                images.push(<img key={++counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+                images.push(<img key={++counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+                images.push(<img key={++counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+            } else {
+                images.push(<img key={counter} id={value.tile +"_disp"} className="tiles" alt={value.title} src={"../images/tiles/" + value.tile + ".JPG"}/>);
+                counter ++; 
+            }
             
         })
         console.log(images);
@@ -195,7 +206,7 @@ for (var i = 1; i < 10; i++) {
     var man = document.getElementById(id);
     man.addEventListener("click", () => {
         setTile(event);
-        tileDisplay();
+        //tileDisplay();
         //updateTileDisplayDiv(event.currentTarget.id);
     });
 }
@@ -206,7 +217,7 @@ for (var i = 1; i < 10; i++) {
     var pin = document.getElementById(id);
     pin.addEventListener("click", () => {
         setTile(event);
-        tileDisplay();
+        //tileDisplay();
     });
 }
 
@@ -216,7 +227,7 @@ for (var i = 1; i < 10; i++) {
     var stick = document.getElementById(id);
     stick.addEventListener("click", () => {
         setTile(event);
-        tileDisplay();
+        //tileDisplay();
         //updateTileDisplayDiv(event.currentTarget.id);
     });
 }
@@ -227,7 +238,7 @@ for (var i = 0; i < dragon_tile_ids.length; i++ ) {
     var dragon = document.getElementById(dragon_tile_ids[i]);
     dragon.addEventListener("click", () => {
         setTile(event);
-        tileDisplay();
+        //tileDisplay();
     });
 }
 
@@ -237,7 +248,7 @@ for (var i = 0; i < wind_tile_ids.length; i++ ) {
     var wind = document.getElementById(wind_tile_ids[i]);
     wind.addEventListener("click", () => {
         setTile(event);
-        tileDisplay();
+        //tileDisplay();
     });
 }
 
