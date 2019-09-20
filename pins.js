@@ -158,6 +158,7 @@ function setTile(event) {
         updateState();
     }
     console.log(tile_map.values());
+    pon_selected = false; chi_selected = false; open_kan_selected = false;   
 
 }
 
